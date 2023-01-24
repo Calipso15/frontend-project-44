@@ -13,15 +13,17 @@ const everOrOdd = () => {
       console.log('Correct!');
     } else if (number % 2 !== 0 && answer === 'yes') {
       console.log(`"yes" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!'`);
-      break;
+      return;
     } else if (number % 2 === 0 && answer === 'no') {
       console.log(`"no" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}!'`);
-      break;
+      return;
     } else {
       console.log(`is wrong answer ;(. \nLet's try again, ${userName}!'`);
-      break;
+      return;
     }
-    console.log(`Congratulations, ${userName}!`);
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
 };
 export default everOrOdd;
