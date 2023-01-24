@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import everOrOdd from '../src/games/even.js';
+// eslint-disable-next-line import/no-named-as-default
+import evenGame from '../src/games/even.js';
 
-everOrOdd();
+evenGame();

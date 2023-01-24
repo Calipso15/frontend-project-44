@@ -11,7 +11,7 @@ const gameHexlet = (mainQuestion, generateRound) => {
     const [question, answer] = generateRound();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (Number(answer) === Number(userAnswer)) {
+    if (answer === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'. \nLet's try again, ${userName}!`);

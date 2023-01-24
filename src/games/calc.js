@@ -26,7 +26,7 @@ const generateRound = () => {
   const signs = ['+', '-', '*'];
   const sign = signs[Math.floor(Math.random() * signs.length)];
   const question = `${number1} ${sign} ${number2}`;
-  const answer = calculation(number1, number2, sign);
+  const answer = String(calculation(number1, number2, sign));
   return [question, answer];
 };
 const calcGame = () => gameHexlet(mainQuestion, generateRound);
