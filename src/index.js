@@ -17,8 +17,9 @@ const gameHexlet = (mainQuestion, generateRound) => {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'. \nLet's try again, ${userName}!`);
       break;
     }
-    console.log(`Congratulations, ${userName}!`);
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
 };
-
 export default gameHexlet;
