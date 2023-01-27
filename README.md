@@ -33,7 +33,7 @@
 <h2>Examples</h2>
 
 <h3>brain-calc</h3>
-<img width="572" alt="brain-calc" src="">
+<img width="572" alt="brain-calc" src="https://asciinema.org/a/87i01iVsJBA5tHAgu8qLMJQFR.svg">
 <h3>brain-even</h3>
 <img width="572" alt="brain-even" src="https://asciinema.org/a/vKTY8x96Lttw7q8wcBpTk0tHx.svg">
 <h3>brain-gcd</h3>
@@ -41,4 +41,4 @@
 <h3>brain-prime</h3>
 <img width="572" alt="brain-prime" src="https://asciinema.org/a/UKQNPCXTzlGDxrL5g4PYnhAIR.svg">
 <h3>brain-progression</h3>
-<img width="572" alt="brain-progression" src="https://asciinema.org/a/3jZaY5DeEmUYaNOOzj5Ah2fXT.svg">g
+<img width="572" alt="brain-progression" src="https://asciinema.org/a/3jZaY5DeEmUYaNOOzj5Ah2fXT.svg">
