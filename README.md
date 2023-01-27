@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Calipso15/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Calipso15/frontend-project-44/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/021cbf28f84e6d29945d/maintainability)](https://codeclimate.com/github/Calipso15/frontend-project-44/maintainability)
+<a href="https://codeclimate.com/github/Calipso15/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/66c4b38e8b3d33a1ec8f/maintainability" /></a>
 
 <h1 align="center">First Hexlet Project</h1>
 <h3 align="center">The Brain Games(console games).</h3>
