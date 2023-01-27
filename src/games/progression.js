@@ -14,7 +14,7 @@ function arithmeticPlusProgression() {
   const clone = arr.slice(0);
   const index = lodash.random(0, arr.length - 1);
   const answer1 = String(clone[index]);
-  const removed = clone.splice(index, 1, '..');
+  clone.splice(index, 1, '..');
   return [String(clone.join(' ')), answer1];
 }
 
