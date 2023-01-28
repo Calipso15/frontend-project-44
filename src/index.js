@@ -22,4 +22,12 @@ const gameHexlet = (mainQuestion, generateRound) => {
     }
   }
 };
+
+export const generateYesOrNoAnswerRound = (maxValueForRandomGen, checkQuestionStatment) => {
+  const number = Math.floor(Math.random() * (maxValueForRandomGen - 1)) + 1;
+  const question = `${number}`;
+  const answer = checkQuestionStatment(question) ? 'yes' : 'no';
+  return [question, answer];
+};
+
 export default gameHexlet;

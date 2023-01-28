@@ -1,4 +1,4 @@
-import gameHexlet from '../index.js';
+import gameHexlet, { generateYesOrNoAnswerRound } from '../index.js';
 
 const mainQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -11,12 +11,8 @@ function isPrime(num) {
   return num > 1;
 }
 
-const generateRound = () => {
-  const number = Math.floor(Math.random() * (20 - 1)) + 1;
-  const question = `${number}`;
-  const answer = isPrime(question) ? 'yes' : 'no';
-  return [question, answer];
-};
+const generateRound = () => generateYesOrNoAnswerRound(20, isPrime);
+
 const primeGame = () => gameHexlet(mainQuestion, generateRound);
 
 export default primeGame;
