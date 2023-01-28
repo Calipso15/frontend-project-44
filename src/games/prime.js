@@ -10,8 +10,9 @@ function isPrime(num) {
   }
   return num > 1;
 }
+const MAX_VALUE = 20;
 
-const generateRound = () => generateYesOrNoAnswerRound(20, isPrime);
+const generateRound = () => generateYesOrNoAnswerRound(MAX_VALUE, isPrime);
 
 const primeGame = () => gameHexlet(mainQuestion, generateRound);
 

@@ -15,9 +15,11 @@ const greatestСommonDivisor = (number1, number2) => {
   return num1 + num2;
 };
 
+const MAX_VALUE_OF_NUMBER = 100;
+
 const generateRound = () => {
-  const number1 = Math.floor(Math.random() * (100 - 1)) + 1;
-  const number2 = Math.floor(Math.random() * (100 - 1)) + 1;
+  const number1 = Math.floor(Math.random() * (MAX_VALUE_OF_NUMBER - 1)) + 1;
+  const number2 = Math.floor(Math.random() * (MAX_VALUE_OF_NUMBER - 1)) + 1;
   const question = `${number1} ${number2}`;
   const answer = String(greatestСommonDivisor(number1, number2));
   return [question, answer];

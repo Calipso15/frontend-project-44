@@ -3,11 +3,16 @@ import gameHexlet from '../index.js';
 
 const mainQuestion = 'What number is missing in the progression?';
 
+const MAX_VALUE_OF_START = 10;
+const MAX_VALUE_OF_STEP = 10;
+const MIN_VALUE_OF_SEQUENCE_LENGTH = 5;
+const MAX_VALUE_OF_SEQUENCE_LENGTH = 10;
+
 function arithmeticPlusProgression() {
   const arr = [];
-  const start = lodash.random(1, 10);
-  const step = lodash.random(1, 10);
-  const length = lodash.random(5, 10);
+  const start = lodash.random(1, MAX_VALUE_OF_START);
+  const step = lodash.random(1, MAX_VALUE_OF_STEP);
+  const length = lodash.random(MIN_VALUE_OF_SEQUENCE_LENGTH, MAX_VALUE_OF_SEQUENCE_LENGTH);
   for (let i = 0; i <= length * step; i += step) {
     arr.push(start + i);
   }

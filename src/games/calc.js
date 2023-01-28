@@ -20,9 +20,11 @@ function calculation(number1, number2, sign) {
   return result;
 }
 
+const MAX_VALUE_OF_NUMBER = 100;
+
 const generateRound = () => {
-  const number1 = Math.floor(Math.random() * (100 - 1)) + 1;
-  const number2 = Math.floor(Math.random() * (100 - 1)) + 1;
+  const number1 = Math.floor(Math.random() * (MAX_VALUE_OF_NUMBER - 1)) + 1;
+  const number2 = Math.floor(Math.random() * (MAX_VALUE_OF_NUMBER - 1)) + 1;
   const signs = ['+', '-', '*'];
   const sign = signs[Math.floor(Math.random() * signs.length)];
   const question = `${number1} ${sign} ${number2}`;
