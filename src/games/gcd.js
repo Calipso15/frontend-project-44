@@ -1,7 +1,7 @@
-import isArchitectureForGames from '../index.js';
+import returnBooleanValueOfFunc from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const gameInstructions = 'Find the greatest common divisor of given numbers.';
+const gameInstruction = 'Find the greatest common divisor of given numbers.';
 
 const lookingForCommonDivisor = (number1, number2) => {
   let num1 = number1;
@@ -23,6 +23,6 @@ const generateRound = () => {
   const answer = String(lookingForCommonDivisor(number1, number2));
   return [question, answer];
 };
-const isCommoDivisorGame = () => isArchitectureForGames(gameInstructions, generateRound);
+const isCommoDivisorGame = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
 
 export default isCommoDivisorGame;

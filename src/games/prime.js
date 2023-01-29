@@ -1,6 +1,7 @@
-import isArchitectureForGames, { generateYesOrNoAnswerRound } from '../index.js';
+import returnBooleanValueOfFunc from '../index.js';
+import { generateDataForRound } from '../utils.js';
 
-const gameInstructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameInstruction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function calculatePrimeNumber(num) {
   for (let i = 2; i < num; i += 1) {
@@ -11,9 +12,10 @@ function calculatePrimeNumber(num) {
   return num > 1;
 }
 const MAX_VALUE = 20;
+const MIN_VALUE = 1;
 
-const generateRound = () => generateYesOrNoAnswerRound(MAX_VALUE, calculatePrimeNumber);
+const generateRound = () => generateDataForRound(MIN_VALUE, MAX_VALUE, calculatePrimeNumber);
 
-const isCalculatePrimeNumberGame = () => isArchitectureForGames(gameInstructions, generateRound);
+const isCalculatePrimeNumberGame = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
 
 export default isCalculatePrimeNumberGame;

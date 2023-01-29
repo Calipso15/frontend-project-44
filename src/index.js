@@ -2,11 +2,11 @@ import readlineSync from 'readline-sync';
 
 const ROUNDS_COUNT = 3;
 
-const isArchitectureForGames = (gameInstructions, generateRound) => {
+const returnBooleanValueOfFunc = (gameInstruction, generateRound) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);
-  console.log(gameInstructions);
+  console.log(gameInstruction);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, answer] = generateRound();
     console.log(`Question: ${question}`);
@@ -21,11 +21,4 @@ const isArchitectureForGames = (gameInstructions, generateRound) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export const generateYesOrNoAnswerRound = (maxValueForRandomGen, checkQuestionStatment) => {
-  const number = Math.floor(Math.random() * (maxValueForRandomGen - 1)) + 1;
-  const question = `${number}`;
-  const answer = checkQuestionStatment(question) ? 'yes' : 'no';
-  return [question, answer];
-};
-
-export default isArchitectureForGames;
+export default returnBooleanValueOfFunc;

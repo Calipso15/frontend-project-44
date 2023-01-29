@@ -1,7 +1,7 @@
 import getRandomInRange from '../utils.js';
-import isArchitectureForGames from '../index.js';
+import returnBooleanValueOfFunc from '../index.js';
 
-const gameInstructions = 'What number is missing in the progression?';
+const gameInstruction = 'What number is missing in the progression?';
 
 const generateArithmeticSequence = (start, step, length) => {
   const arr = [];
@@ -23,6 +23,6 @@ const generateRound = () => {
   const answer = String(correctAnswer);
   return [question, answer];
 };
-const insertNumberInProgression = () => isArchitectureForGames(gameInstructions, generateRound);
+const insertNumberInProgression = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
 
 export default insertNumberInProgression;
