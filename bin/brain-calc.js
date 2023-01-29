@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isGameCalculateExpression from '../src/games/calc.js';
+import runCalcGame from '../src/games/calc.js';
 
-isGameCalculateExpression();
+runCalcGame();

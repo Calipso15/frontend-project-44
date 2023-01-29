@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const ROUNDS_COUNT = 3;
 
-const returnBooleanValueOfFunc = (gameInstruction, generateRound) => {
+const runGame = (gameInstruction, generateRound) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);
@@ -21,4 +21,4 @@ const returnBooleanValueOfFunc = (gameInstruction, generateRound) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default returnBooleanValueOfFunc;
+export default runGame;

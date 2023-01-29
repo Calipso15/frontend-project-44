@@ -1,5 +1,5 @@
 import getRandomInRange from '../utils.js';
-import returnBooleanValueOfFunc from '../index.js';
+import runGame from '../index.js';
 
 const gameInstruction = 'What number is missing in the progression?';
 
@@ -23,6 +23,6 @@ const generateRound = () => {
   const answer = String(correctAnswer);
   return [question, answer];
 };
-const insertNumberInProgression = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
+const runProgressionGame = () => runGame(gameInstruction, generateRound);
 
-export default insertNumberInProgression;
+export default runProgressionGame;

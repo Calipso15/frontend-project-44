@@ -1,4 +1,4 @@
-import returnBooleanValueOfFunc from '../index.js';
+import runGame from '../index.js';
 import getRandomInRange from '../utils.js';
 
 const gameInstruction = 'Find the greatest common divisor of given numbers.';
@@ -23,6 +23,6 @@ const generateRound = () => {
   const answer = String(lookingForCommonDivisor(number1, number2));
   return [question, answer];
 };
-const isCommoDivisorGame = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
+const runGcdGame = () => runGame(gameInstruction, generateRound);
 
-export default isCommoDivisorGame;
+export default runGcdGame;

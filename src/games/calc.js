@@ -1,4 +1,4 @@
-import returnBooleanValueOfFunc from '../index.js';
+import runGame from '../index.js';
 import getRandomInRange, { getRandomIndexInArray } from '../utils.js';
 
 const gameInstruction = 'What is the result of the expression?';
@@ -30,6 +30,6 @@ const generateRound = () => {
   const answer = String(evaluateExpression(number1, number2, gettingRandomOperator));
   return [question, answer];
 };
-const returnBoolValueOfCalcGame = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
+const runCalcGame = () => runGame(gameInstruction, generateRound);
 
-export default returnBoolValueOfCalcGame;
+export default runCalcGame;

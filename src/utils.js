@@ -1,12 +1,6 @@
-const getRandomInRange = (min, max) => {
-  const formula = Math.floor(Math.random() * (max - min + 1)) + min;
-  return formula;
-};
+const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-export const getRandomIndexInArray = (array) => {
-  const formula = Math.floor(Math.random() * array.length);
-  return formula;
-};
+export const getRandomIndexInArray = (array) => Math.floor(Math.random() * array.length);
 
 export const generateDataForRound = (min, maxValueForRandomGen, checkQuestionStatment) => {
   const number = getRandomInRange(min, maxValueForRandomGen);

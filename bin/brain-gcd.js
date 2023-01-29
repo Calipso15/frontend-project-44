@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isCommoDivisorGame from '../src/games/gcd.js';
+import runGcdGame from '../src/games/gcd.js';
 
-isCommoDivisorGame();
+runGcdGame();

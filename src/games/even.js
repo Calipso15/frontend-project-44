@@ -1,4 +1,4 @@
-import returnBooleanValueOfFunc from '../index.js';
+import runGame from '../index.js';
 import { generateDataForRound } from '../utils.js';
 
 const gameInstruction = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -10,6 +10,6 @@ const MIN_VALUE = 1;
 
 const generateRound = () => generateDataForRound(MIN_VALUE, MAX_VALUE, countEvenOrOddNumber);
 
-const IsEvenOrOddNumberGame = () => returnBooleanValueOfFunc(gameInstruction, generateRound);
+const runEvenGame = () => runGame(gameInstruction, generateRound);
 
-export default IsEvenOrOddNumberGame;
+export default runEvenGame;
