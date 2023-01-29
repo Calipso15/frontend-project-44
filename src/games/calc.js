@@ -3,7 +3,7 @@ import getRandomInRange, { getRandomIndexInArray } from '../utils.js';
 
 const gameInstruction = 'What is the result of the expression?';
 
-function evaluateExpression(number1, number2, sign) {
+const evaluateExpression = (number1, number2, sign) => {
   switch (sign) {
     case '+':
       return number1 + number2;
@@ -14,7 +14,7 @@ function evaluateExpression(number1, number2, sign) {
     default:
       throw new Error(`Unknown order state: '${sign}'!`);
   }
-}
+};
 
 const getRandomNumberOperator = () => {
   const signs = ['+', '-', '*'];
