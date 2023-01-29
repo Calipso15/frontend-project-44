@@ -1,8 +1,9 @@
-import gameHexlet from '../index.js';
+import isArchitectureForGames from '../index.js';
+import getRandomInRange, { randArray } from '../utils.js';
 
-const mainQuestion = 'What is the result of the expression?';
+const gameInstructions = 'What is the result of the expression?';
 
-function calculation(number1, number2, sign) {
+function evaluateExpression(number1, number2, sign) {
   let result;
   switch (sign) {
     case '+':
@@ -15,22 +16,20 @@ function calculation(number1, number2, sign) {
       result = number1 * number2;
       break;
     default:
-      result = 'error';
+      throw new Error(`Unknown order state: '${sign}'!`);
   }
   return result;
 }
 
-const MAX_VALUE_OF_NUMBER = 100;
-
 const generateRound = () => {
-  const number1 = Math.floor(Math.random() * (MAX_VALUE_OF_NUMBER - 1)) + 1;
-  const number2 = Math.floor(Math.random() * (MAX_VALUE_OF_NUMBER - 1)) + 1;
+  const number1 = getRandomInRange(100, 1);
+  const number2 = getRandomInRange(100, 1);
   const signs = ['+', '-', '*'];
-  const sign = signs[Math.floor(Math.random() * signs.length)];
+  const sign = signs[randArray(signs)];
   const question = `${number1} ${sign} ${number2}`;
-  const answer = String(calculation(number1, number2, sign));
+  const answer = String(evaluateExpression(number1, number2, sign));
   return [question, answer];
 };
-const calcGame = () => gameHexlet(mainQuestion, generateRound);
+const isGameCalculateExpression = () => isArchitectureForGames(gameInstructions, generateRound);
 
-export default calcGame;
+export default isGameCalculateExpression;
