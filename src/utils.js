@@ -1,4 +1,4 @@
-const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const getRandomIndexInArray = (array) => Math.floor(Math.random() * array.length);
 
@@ -8,5 +8,3 @@ export const generateDataForRound = (min, maxValueForRandomGen, checkQuestionSta
   const answer = checkQuestionStatment(question) ? 'yes' : 'no';
   return [question, answer];
 };
-
-export default getRandomInRange;

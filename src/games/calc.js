@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import getRandomInRange, { getRandomIndexInArray } from '../utils.js';
+import { getRandomInRange, getRandomIndexInArray } from '../utils.js';
 
 const gameInstruction = 'What is the result of the expression?';
 
@@ -18,8 +18,7 @@ const evaluateExpression = (number1, number2, sign) => {
 
 const getRandomNumberOperator = () => {
   const signs = ['+', '-', '*'];
-  const sign = signs[getRandomIndexInArray(signs)];
-  return sign;
+  return signs[getRandomIndexInArray(signs)];
 };
 
 const generateRound = () => {
