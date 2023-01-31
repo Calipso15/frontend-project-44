@@ -4,15 +4,14 @@ import { getRandomInRange } from '../utils.js';
 const gameInstruction = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (num1, num2) => {
-  if ((num1 === 0) || (num2 === 0)) {
-    return num1 + num2;
+  const remainder = num1 % num2;
+
+  if (remainder === 0) {
+    return num2;
   }
 
-  return getGCD(...(num1 > num2 ? [num1 % num2, num2] : [num1, num2 % num1]));
+  return getGCD(num2, remainder);
 };
-/* рекурсии, кстати, еще не было в программе, тяжело далось переписывание этой функции.
-код красивее, конечно, но на мой взгляд, сложнее читается
-*/
 
 const generateRound = () => {
   const number1 = getRandomInRange(1, 30);
