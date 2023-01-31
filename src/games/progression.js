@@ -1,4 +1,4 @@
-import { getRandomInRange } from '../utils.js';
+import { getRandomInRange, getRandomIndexInArray } from '../utils.js';
 import runGame from '../index.js';
 
 const gameInstruction = 'What number is missing in the progression?';
@@ -16,7 +16,7 @@ const generateArithmeticSequence = () => {
 
 const generateRound = () => {
   const progression = generateArithmeticSequence();
-  const randomIndex = getRandomInRange(1, progression.length - 1);
+  const randomIndex = getRandomIndexInArray(progression);
   const correctAnswer = progression[randomIndex];
   progression[randomIndex] = '..';
   const question = progression.join(' ');
